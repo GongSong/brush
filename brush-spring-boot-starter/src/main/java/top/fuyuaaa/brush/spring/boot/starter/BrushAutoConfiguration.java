@@ -18,7 +18,7 @@ import top.fuyuaaa.brush.dyopen.DyOpenConfig;
 public class BrushAutoConfiguration {
 
     @Bean
-    @ConditionalOnMissingBean
+    @ConditionalOnProperty(prefix = "brush.config", value = "dyOpenClientKey")
     public DyOpenConfig dyOpenConfig(BrushProperties brushProperties) {
         return new DyOpenConfig(brushProperties.getDyOpenClientKey(),brushProperties.getDyOpenClientSecret());
     }

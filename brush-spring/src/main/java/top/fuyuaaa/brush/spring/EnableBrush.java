@@ -11,7 +11,7 @@ import java.lang.annotation.*;
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-@Import({BrushImportSelector.class})
+@Import({CommonConfiguration.class, BrushImportSelector.class})
 public @interface EnableBrush {
     /**
      * available values : dyopen

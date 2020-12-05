@@ -1,5 +1,6 @@
 package top.fuyuaaa.brush.dyopen.api;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import top.fuyuaaa.brush.common.Request;
@@ -16,8 +17,9 @@ import top.fuyuaaa.brush.dyopen.constant.DyOpenApiConstants;
  */
 @Getter
 @Setter
+@AllArgsConstructor
 public class UserInfoApi {
-    private Request request;
+    private final Request request;
 
     public UserInfoResult getUserInfo(String openId, String accessToken) throws RequestErrorException {
         String url = UrlBuilder.buildUrl(DyOpenApiConstants.USER_INFO, openId, accessToken);

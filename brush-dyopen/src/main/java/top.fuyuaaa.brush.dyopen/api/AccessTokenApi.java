@@ -1,6 +1,7 @@
 package top.fuyuaaa.brush.dyopen.api;
 
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import top.fuyuaaa.brush.common.Request;
@@ -16,10 +17,11 @@ import top.fuyuaaa.brush.dyopen.constant.DyOpenApiConstants;
  */
 @Getter
 @Setter
+@AllArgsConstructor
 public class AccessTokenApi {
 
-    private Request request;
-    private DyOpenConfig config;
+    private final Request request;
+    private final DyOpenConfig config;
 
     public AccessTokenResult getAccessToken(String code) throws RequestErrorException {
         String url = UrlBuilder.buildUrl(DyOpenApiConstants.ACCESS_TOKEN, config.getClientKey(), config.getClientSecret(), code);

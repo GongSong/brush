@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
  * @date : 2020-12-03 15:56
  */
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
 public class DyOpenConfig {
     private String clientKey;

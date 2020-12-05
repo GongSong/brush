@@ -13,6 +13,7 @@
         <module>brush-dyopen</module>
         <module>brush-spring</module>
         <module>brush-spring-boot-starter</module>
+        <module>test-boot</module>
     </modules>
 
     <dependencyManagement>
@@ -97,6 +98,13 @@
 
     <build>
         <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>

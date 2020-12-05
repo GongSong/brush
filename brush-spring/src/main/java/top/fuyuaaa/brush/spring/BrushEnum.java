@@ -1,6 +1,7 @@
 package top.fuyuaaa.brush.spring;
 
 import lombok.Getter;
+import top.fuyuaaa.brush.dyopen.DyOpenConfig;
 import top.fuyuaaa.brush.dyopen.api.AccessTokenApi;
 import top.fuyuaaa.brush.dyopen.api.UserInfoApi;
 
@@ -13,15 +14,14 @@ public enum BrushEnum {
     /**
      * 抖音开放平台
      */
-    DY_OPEN(BrushConstants.DY_OPEN_CODE, BrushConstants.DY_OPEN_BEANS),
+    DY_OPEN(BrushConstants.DY_OPEN_CODE, DyOpenConfiguration.class.getName()),
     ;
     String code;
-    String[] beans;
+    String bean;
 
-
-    BrushEnum(String code, String[] beans) {
+    BrushEnum(String code, String bean) {
         this.code = code;
-        this.beans = beans;
+        this.bean = bean;
     }
 
     public static BrushEnum find(String code) {
@@ -35,14 +35,6 @@ public enum BrushEnum {
 
     public interface BrushConstants {
         String DY_OPEN_CODE = "dyopen";
-
-
-
-
-        String[] DY_OPEN_BEANS = new String[]{
-                AccessTokenApi.class.getName(),
-                UserInfoApi.class.getName()
-        };
     }
 
 }

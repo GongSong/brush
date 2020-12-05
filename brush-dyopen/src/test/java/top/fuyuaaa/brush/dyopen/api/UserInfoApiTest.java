@@ -13,9 +13,8 @@ public class UserInfoApiTest {
     String accessToken = "act.68d88f96ef2c7c6851c287c9a82ae269BFmvoXzOojk11ZtdqlKqrFuIXEkm";
 
     {
-        userInfoApi = new UserInfoApi();
         Request request = new DefaultRequest();
-        userInfoApi.setRequest(request);
+        userInfoApi = new UserInfoApi(request);
     }
 
     @Test
