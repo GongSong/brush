@@ -5,7 +5,7 @@ package top.fuyuaaa.brush.common;
  * @date : 2020-12-03 15:50
  */
 public class UrlBuilder {
-    public static String buildUrl(String url, Object... params) {
+    public static String parseUrl(String url, Object... params) {
         return String.format(url, params);
     }
 }

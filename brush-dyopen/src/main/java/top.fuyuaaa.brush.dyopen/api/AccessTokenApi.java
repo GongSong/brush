@@ -24,7 +24,7 @@ public class AccessTokenApi {
     private final DyOpenConfig config;
 
     public AccessTokenResult getAccessToken(String code) throws RequestErrorException {
-        String url = UrlBuilder.buildUrl(DyOpenApiConstants.ACCESS_TOKEN, config.getClientKey(), config.getClientSecret(), code);
+        String url = UrlBuilder.parseUrl(DyOpenApiConstants.ACCESS_TOKEN, config.getClientKey(), config.getClientSecret(), code);
         return request.get(url, AccessTokenResult.class);
     }
 

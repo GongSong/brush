@@ -22,7 +22,7 @@ public class UserInfoApi {
     private final Request request;
 
     public UserInfoResult getUserInfo(String openId, String accessToken) throws RequestErrorException {
-        String url = UrlBuilder.buildUrl(DyOpenApiConstants.USER_INFO, openId, accessToken);
+        String url = UrlBuilder.parseUrl(DyOpenApiConstants.USER_INFO, openId, accessToken);
         return request.get(url, UserInfoResult.class);
     }
 }
