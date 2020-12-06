@@ -2,12 +2,9 @@ package top.fuyuaaa.brush.common;
 
 
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.TypeReference;
 import lombok.extern.slf4j.Slf4j;
 import top.fuyuaaa.brush.common.error.ErrorCode;
 import top.fuyuaaa.brush.common.error.RequestErrorException;
-
-import java.lang.reflect.Type;
 
 /**
  * @author : fuyuaaa

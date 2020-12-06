@@ -2,7 +2,6 @@ package top.fuyuaaa.brush.dyopen;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 /**
  * 抖音开放平台-应用相关配置

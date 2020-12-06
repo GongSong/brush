@@ -4,7 +4,6 @@ import org.springframework.context.annotation.Bean;
 import top.fuyuaaa.brush.common.Request;
 import top.fuyuaaa.brush.dyopen.DyOpenConfig;
 import top.fuyuaaa.brush.dyopen.api.AccessTokenApi;
-import top.fuyuaaa.brush.dyopen.api.UserInfoApi;
 
 public class DyOpenConfiguration {
     @Bean

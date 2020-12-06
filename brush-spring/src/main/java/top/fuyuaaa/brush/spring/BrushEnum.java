@@ -1,9 +1,6 @@
 package top.fuyuaaa.brush.spring;
 
 import lombok.Getter;
-import top.fuyuaaa.brush.dyopen.DyOpenConfig;
-import top.fuyuaaa.brush.dyopen.api.AccessTokenApi;
-import top.fuyuaaa.brush.dyopen.api.UserInfoApi;
 
 /**
  * @author : fuyuaaa

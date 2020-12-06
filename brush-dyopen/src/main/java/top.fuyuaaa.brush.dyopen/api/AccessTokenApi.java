@@ -23,9 +23,24 @@ public class AccessTokenApi {
     private final Request request;
     private final DyOpenConfig config;
 
+    public String platformOauthConnect(String scope, String redirectUrl) {
+        String url = UrlBuilder.parseUrl(DyOpenApiConstants.CODE, config.getClientKey(), scope, redirectUrl);
+        return url;
+    }
+
+
     public AccessTokenResult getAccessToken(String code) throws RequestErrorException {
         String url = UrlBuilder.parseUrl(DyOpenApiConstants.ACCESS_TOKEN, config.getClientKey(), config.getClientSecret(), code);
         return request.get(url, AccessTokenResult.class);
     }
 
+    public AccessTokenResult refreshAccessToken(String refreshToken) {
+        String url = UrlBuilder.parseUrl(DyOpenApiConstants.REFRESH_ACCESS_TOKEN, config.getClientKey(), refreshToken);
+        return request.get(url, AccessTokenResult.class);
+    }
+
+    public AccessTokenResult renewRefreshToken(String refreshToken){
+        String url = UrlBuilder.parseUrl(DyOpenApiConstants.RENEW_REFRESH_TOKEN, config.getClientKey(), refreshToken);
+        return request.get(url, AccessTokenResult.class);
+    }
 }

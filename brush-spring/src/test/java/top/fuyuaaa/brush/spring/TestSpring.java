@@ -3,7 +3,6 @@ package top.fuyuaaa.brush.spring;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import top.fuyuaaa.brush.dyopen.DyOpenConfig;
-import top.fuyuaaa.brush.dyopen.api.UserInfoApi;
 
 /**
  * @author : fuyuaaa
