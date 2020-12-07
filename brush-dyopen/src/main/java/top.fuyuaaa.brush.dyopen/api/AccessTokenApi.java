@@ -5,11 +5,11 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import top.fuyuaaa.brush.common.Request;
-import top.fuyuaaa.brush.common.UrlBuilder;
-import top.fuyuaaa.brush.common.error.RequestErrorException;
-import top.fuyuaaa.brush.dyopen.model.AccessTokenResult;
+import top.fuyuaaa.brush.common.util.UrlBuilder;
 import top.fuyuaaa.brush.dyopen.DyOpenConfig;
 import top.fuyuaaa.brush.dyopen.constant.DyOpenApiConstants;
+import top.fuyuaaa.brush.dyopen.model.AccessTokenResult;
+import top.fuyuaaa.brush.dyopen.model.RefreshTokenResult;
 
 /**
  * @author : fuyuaaa
@@ -24,23 +24,23 @@ public class AccessTokenApi {
     private final DyOpenConfig config;
 
     public String platformOauthConnect(String scope, String redirectUrl) {
-        String url = UrlBuilder.parseUrl(DyOpenApiConstants.CODE, config.getClientKey(), scope, redirectUrl);
-        return url;
+        return UrlBuilder.parseUrl(DyOpenApiConstants.CODE, config.getClientKey(), scope, redirectUrl);
     }
 
-
-    public AccessTokenResult getAccessToken(String code) throws RequestErrorException {
+    public AccessTokenResult getAccessToken(String code) {
         String url = UrlBuilder.parseUrl(DyOpenApiConstants.ACCESS_TOKEN, config.getClientKey(), config.getClientSecret(), code);
-        return request.get(url, AccessTokenResult.class);
+        AccessTokenResult accessTokenResult = request.get(url, AccessTokenResult.class);
+        return accessTokenResult;
     }
 
     public AccessTokenResult refreshAccessToken(String refreshToken) {
         String url = UrlBuilder.parseUrl(DyOpenApiConstants.REFRESH_ACCESS_TOKEN, config.getClientKey(), refreshToken);
-        return request.get(url, AccessTokenResult.class);
+        AccessTokenResult accessTokenResult = request.get(url, AccessTokenResult.class);
+        return accessTokenResult;
     }
 
-    public AccessTokenResult renewRefreshToken(String refreshToken){
+    public RefreshTokenResult renewRefreshToken(String refreshToken) {
         String url = UrlBuilder.parseUrl(DyOpenApiConstants.RENEW_REFRESH_TOKEN, config.getClientKey(), refreshToken);
-        return request.get(url, AccessTokenResult.class);
+        return request.get(url, RefreshTokenResult.class);
     }
 }

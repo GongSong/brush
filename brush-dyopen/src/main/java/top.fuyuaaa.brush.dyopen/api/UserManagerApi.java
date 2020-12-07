@@ -2,7 +2,7 @@ package top.fuyuaaa.brush.dyopen.api;
 
 import lombok.AllArgsConstructor;
 import top.fuyuaaa.brush.common.Request;
-import top.fuyuaaa.brush.common.UrlBuilder;
+import top.fuyuaaa.brush.common.util.UrlBuilder;
 import top.fuyuaaa.brush.common.error.RequestErrorException;
 import top.fuyuaaa.brush.dyopen.constant.DyOpenApiConstants;
 import top.fuyuaaa.brush.dyopen.model.UserListResult;

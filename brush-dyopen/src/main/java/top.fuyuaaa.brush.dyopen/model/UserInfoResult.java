@@ -4,7 +4,7 @@ import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.apache.commons.codec.binary.Base64;
-import top.fuyuaaa.brush.common.AES;
+import top.fuyuaaa.brush.common.util.AES;
 import top.fuyuaaa.brush.common.BaseData;
 
 import java.io.Serializable;

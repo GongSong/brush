@@ -13,25 +13,14 @@ import java.io.Serializable;
  */
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class AccessTokenResult extends BaseData implements Serializable {
+public class RefreshTokenResult extends BaseData implements Serializable {
 
-    private static final long serialVersionUID = 649889641349441113L;
-
-    @JSONField(name = "access_token")
-    private String accessToken;
+    private static final long serialVersionUID = 3956950431279515707L;
 
     @JSONField(name = "expires_in")
     private Integer expiresIn;
 
-    @JSONField(name = "open_id")
-    private String openId;
-
     @JSONField(name = "refresh_token")
     private String refreshToken;
-
-    private String scope;
-
-    @JSONField(name = "unionid")
-    private String unionId;
 
 }

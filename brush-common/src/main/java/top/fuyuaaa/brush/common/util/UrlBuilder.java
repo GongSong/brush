@@ -1,4 +1,4 @@
-package top.fuyuaaa.brush.common;
+package top.fuyuaaa.brush.common.util;
 
 /**
  * @author : fuyuaaa

@@ -19,4 +19,8 @@ public @interface EnableBrush {
      * @see BrushEnum.BrushConstants
      */
     String[] type() default {};
+
+    boolean enableCache() default false;
+
+    String cacheStrategy() default "local";
 }

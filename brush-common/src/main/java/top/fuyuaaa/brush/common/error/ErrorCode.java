@@ -12,6 +12,7 @@ public enum ErrorCode {
      * success
      */
     SUCCESS(0, "success"),
+    INVALID_ACCESS_TOKEN(10008, "无效access_token"),
     PARAMETER_ERROR(2100005, "Parameter error"),
     ;
 

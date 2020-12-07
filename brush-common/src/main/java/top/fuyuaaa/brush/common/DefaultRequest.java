@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSON;
 import lombok.extern.slf4j.Slf4j;
 import top.fuyuaaa.brush.common.error.ErrorCode;
 import top.fuyuaaa.brush.common.error.RequestErrorException;
+import top.fuyuaaa.brush.common.util.OkHttpUtil;
 
 /**
  * @author : fuyuaaa
@@ -29,7 +30,7 @@ public class DefaultRequest implements Request {
         Integer errorCode = t.getErrorCode();
         if (!ErrorCode.SUCCESS.getErrorCode().equals(errorCode)) {
             log.info("extra:{}", JSON.toJSONString(requestResult.getExtra()));
-            throw new RequestErrorException(t);
+            throw new RequestErrorException(new BaseData(t.getErrorCode(), t.getDescription()));
         }
         return t;
     }

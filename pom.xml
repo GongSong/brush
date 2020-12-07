@@ -14,6 +14,7 @@
         <module>brush-spring</module>
         <module>brush-spring-boot-starter</module>
         <module>test-boot</module>
+        <module>brush-cache</module>
     </modules>
 
     <dependencyManagement>
@@ -31,6 +32,11 @@
             <dependency>
                 <groupId>top.fuyuaaa</groupId>
                 <artifactId>brush-spring</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>top.fuyuaaa</groupId>
+                <artifactId>brush-cache</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -54,11 +60,6 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-log4j12</artifactId>
                 <version>1.7.30</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>3.10</version>
             </dependency>
             <dependency>
                 <groupId>commons-codec</groupId>
@@ -92,6 +93,11 @@
                 <groupId>javax.validation</groupId>
                 <artifactId>validation-api</artifactId>
                 <version>2.0.1.Final</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.5.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

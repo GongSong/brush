@@ -1,4 +1,4 @@
-package top.fuyuaaa.brush.common;
+package top.fuyuaaa.brush.common.util;
 
 import lombok.extern.slf4j.Slf4j;
 import okhttp3.MediaType;
